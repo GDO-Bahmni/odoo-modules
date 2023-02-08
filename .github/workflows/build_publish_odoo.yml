@@ -3,7 +3,7 @@ on:
   push:
     branches:
       - master
-      - 'release-*'
+      # - 'release-*'
     tags:
       - '[0-9]+.[0-9]+.[0-9]+'
     paths-ignore:
@@ -41,4 +41,4 @@ jobs:
           platforms: linux/amd64
           file: package/docker/odoo/Dockerfile
           push: true
-          tags: bahmni/odoo-10:${{env.ARTIFACT_VERSION}},bahmni/odoo-10:latest
+          tags: deepti1598/odoo-10:${{env.ARTIFACT_VERSION}},deepti1598/odoo-10:latest

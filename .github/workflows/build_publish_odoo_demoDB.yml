@@ -41,4 +41,4 @@ jobs:
           platforms: linux/amd64,linux/arm64
           file: package/docker/demoDB/Dockerfile
           push: true
-          tags: bahmni/odoo-10-db:demo-${{env.ARTIFACT_VERSION}},bahmni/odoo-10-db:demo-latest
+          tags: deepti1598/odoo-10-db:demo-${{env.ARTIFACT_VERSION}},deepti1598/odoo-10-db:demo-latest

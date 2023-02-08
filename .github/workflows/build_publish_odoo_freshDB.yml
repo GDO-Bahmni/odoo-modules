@@ -3,7 +3,7 @@ on:
   push:
     branches:
       - master
-      - 'release-*'
+      # - 'release-*'
     tags:
       - '[0-9]+.[0-9]+.[0-9]+'
     paths:
@@ -38,5 +38,5 @@ jobs:
           platforms: linux/amd64,linux/arm64
           file: package/docker/freshDB/Dockerfile
           push: true
-          tags: bahmni/odoo-10-db:fresh-${{env.ARTIFACT_VERSION}},bahmni/odoo-10-db:fresh-latest
+          tags: deepti1598/odoo-10-db:fresh-${{env.ARTIFACT_VERSION}},deepti1598/odoo-10-db:fresh-latest
 
