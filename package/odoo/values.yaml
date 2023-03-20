@@ -59,6 +59,9 @@ volumes:
     capacity: "2Gi"
     claimName: odooappdata-pvc
   
+  extra-addons:
+    capacity: "2Gi"
+    claimName: extra-addons-pvc
 
 nodeSelector: {}
 tolerations: []
