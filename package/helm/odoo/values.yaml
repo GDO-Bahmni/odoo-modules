@@ -22,8 +22,8 @@ service:
   jmxport: 8280
 
 config:
-  HOST: odoodb
-  POSTGRES_DB: postgres
+  HOST: bahmni-dev-postgresql
+  POSTGRES_DB: odoo
   ODOO_DB_SERVER: odoodb
   OPENMRS_HOST: openmrs
   OPENMRS_PORT: 8080
@@ -33,12 +33,12 @@ config:
   ODOO_PORT: 8069
 
 secrets:
-  USER: ""
-  PASSWORD: ""
-  POSTGRES_PASSWORD: ""
-  POSTGRES_USER: ""
-  OPENMRS_ATOMFEED_USER: ""
-  OPENMRS_ATOMFEED_PASSWORD: ""
+  USER: odoo
+  PASSWORD: password
+  POSTGRES_PASSWORD: password
+  POSTGRES_USER: odoo
+  OPENMRS_ATOMFEED_USER: superman
+  OPENMRS_ATOMFEED_PASSWORD: Admin123
   OPENELIS_ATOMFEED_USER: ""
   OPENELIS_ATOMFEED_PASSWORD: ""
   ODOO_ATOMFEED_USER: ""
@@ -59,9 +59,9 @@ volumes:
     capacity: "2Gi"
     claimName: odooappdata-pvc
   
-  extra-addons:
+  extra_addons:
     capacity: "2Gi"
-    claimName: extra-addons-pvc
+    claimName: extra_addons-pvc
 
 nodeSelector: {}
 tolerations: []

@@ -76,5 +76,5 @@ spec:
            claimName: {{ .Values.volumes.odooappdata.claimName }}
         - name: odoo-extra-addons
         persistentVolumeClaim:
-        claimName: {{ .Values.volumes.extra-addons.claimName }}
+        claimName: {{ .Values.volumes.extra_addons.claimName }}
         

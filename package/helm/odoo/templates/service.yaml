@@ -1,9 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ include "odoo.fullname" . }}
+name: {{ .Chart.Name }}
   labels:
-    {{- include "odoo.labels" . | nindent 4 }}
+    app: {{ .Chart.Name }}
+    environment: {{ .Values.metadata.labels.environment }}
 spec:
   type: {{ .Values.service.type }}
   ports:
@@ -12,4 +13,5 @@ spec:
       protocol: TCP
       name: http
   selector:
-    {{- include "odoo.selectorLabels" . | nindent 4 }}
+    app: {{ .Chart.Name }}
+    environment: {{ .Values.metadata.labels.environment }}
